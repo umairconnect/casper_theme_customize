@@ -4206,7 +4206,7 @@ object
 
     color: #fff;
     border-bottom: #ebf2f6 1px solid;
-    background: #303538 no-repeat center center;
+    background: red no-repeat center center;
     background-size: cover;
 }
 .site-head:after
