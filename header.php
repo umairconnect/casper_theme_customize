@@ -20,6 +20,21 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
+	<style type="text/css">
+		
+		.searchheader form {
+	 		padding: 10px;
+		}
+		.searchheader .search-submit {
+			background: black;
+			color: white;
+			border: 0px;
+			padding: 11px 20px;
+			border-radius: 0;
+			background-image: none;
+			box-shadow: none;
+		}
+	</style>
 </head>
 
 <body <?php body_class(); ?>>
@@ -156,6 +171,12 @@
             </div>
         </div>
     </div>
+
+    <div class="vertical-row searchheader">
+        <?php get_search_form(); ?>
+    </div>
+
+
 </header><!-- #masthead -->
 
 <main id="content" class="content" role="main">

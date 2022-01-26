@@ -145,6 +145,7 @@ h1
 
     margin: .67em 0;
 }
+
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
@@ -4209,6 +4210,7 @@ object
     background: red no-repeat center center;
     background-size: cover;
 }
+
 .site-head:after
 {
     position: absolute;
