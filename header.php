@@ -15,6 +15,8 @@
 <meta name="HandheldFriendly" content="True" />
 <meta name="MobileOptimized" content="320" />
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 
 <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -23,7 +25,10 @@
 	<style type="text/css">
 		
 		.searchheader form {
-	 		padding: 10px;
+            padding: 0px 0px 20px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center
 		}
 		.searchheader .search-submit {
 			background: black;
@@ -34,6 +39,20 @@
 			background-image: none;
 			box-shadow: none;
 		}
+		.searchheader label input{
+			    padding: 3px 16px;
+		}
+        #secondary {
+            display: none;
+        }
+        .post-list .post-title{
+            font-size: 20px;
+            line-height: initial;
+            letter-spacing: normal;
+            font-family: system-ui;
+            font-weight: 600;
+
+        }
 	</style>
 </head>
 
