@@ -23,7 +23,10 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
 	<style type="text/css">
-		
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600&display=swap');
+		h1, h2, h3, h4, h5, h6, a, p {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
 		.searchheader form {
             padding: 0px 0px 20px 0px;
             display: flex;
@@ -40,18 +43,98 @@
 			box-shadow: none;
 		}
 		.searchheader label input{
-			    padding: 3px 16px;
+            padding: 6px 50px 6px 18px;
+            font-weight: initial;
+            font-size: 14px;
+            font-family: 'Circular-Loom';
 		}
-        #secondary {
-            display: none;
-        }
-        .post-list .post-title{
-            font-size: 20px;
+
+        .post-list .post-title a{
+            font-size: 21px;
             line-height: initial;
             letter-spacing: normal;
             font-family: system-ui;
             font-weight: 600;
+        }
+        .post-list .post-title:after{
+            content: '';
+            display: block;
+            width: 64px;
+            height: 1px;
+            background-color: #EE4E3A;
+            margin: 20px 0 10px;
+        }
+        .post-list .post-content p {
+            margin: 17px 0 !important;
+            font-size: 1.45rem;
+        }
+        h1 {
+            font-size: 34px;
+            color: black;
+            line-height: initial;
+            letter-spacing: normal;
+            font-weight: 800;
+        }
+        .darkluplite-mode-switcher {
+            position: absolute;
+            top: 50px;
+            z-index: 100000000000;
+        }
+        .main-navigation a {
+            display: block;
 
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .main-navigation a:hover {
+            background-color: unset;
+            border-bottom: 1px solid;
+        }
+        .main-navigation>div {
+            margin: 0 auto;
+            padding-bottom: 25px;
+            width: 100%;
+            max-width: fit-content;
+        }
+        .categories a {
+            margin: 0.5rem;
+            padding: 6px 11px;
+            border-radius: 4px;
+            color: white;
+            font-weight: 800;
+            font-size: 17px;
+            text-transform: capitalize;
+            text-decoration: none;
+        }
+        #secondary {
+            display: none;
+        }
+        .page-header .page-title{
+            text-transform: capitalize;
+            font-size: 23px !important;
+            margin-bottom: 13px !important;
+            font-weight: 900 !important;
+            color: #c70000;
+        }
+        html.darkluplite-dark-mode-enabled a {
+            color: white !important;
+        }
+        .site-head:after {
+            width: 0 !important;
+            height: 0 !important;
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+        }
+        .hentry:after {
+            width: 0 !important;
+            height: 0 !important;
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+        }
+        .read_time {
+            font-size: 14px;
         }
 	</style>
 </head>
@@ -67,7 +150,12 @@
                 </a>
             </h1>
             <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'casper' ); ?></a>
-            <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+             <div class="row">
+                 <div class="col-lg-12">
+                     <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+                 </div>
+
+             </div>
         </div>
     </nav><!-- #site-navigation -->
 
@@ -199,3 +287,4 @@
 </header><!-- #masthead -->
 
 <main id="content" class="content" role="main">
+
