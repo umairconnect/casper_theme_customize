@@ -7,7 +7,10 @@
  * @package Casper
  */
 
-get_header(); ?>
+get_header();
+
+
+?>
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -91,6 +94,9 @@ get_header(); ?>
                     ?>
 
                 <?php endwhile; ?>
+                <nav class="pagination">
+                    <?php pagination_bar( $loop ); ?>
+                </nav>
 
 
 			<?php casper_paging_nav(); ?>

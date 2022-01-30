@@ -136,6 +136,32 @@
         .read_time {
             font-size: 14px;
         }
+        .postlist_header {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+        h1 {
+            margin: 0.2em 0;
+            text-transform: capitalize;
+            font-size: 28px;
+        }
+        a {
+            margin: 0.2em 0;
+            color: blue;
+            margin-left: auto;
+        }
+        .home .navigation {
+            display: none;
+        }
+        .paging-navigation {
+            display: none;
+        }
+        .navigation {
+            justify-content: center;
+            display: flex;
+            margin: 20px;
+        }
 	</style>
 </head>
 

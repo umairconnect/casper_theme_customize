@@ -231,4 +231,21 @@ function casper_customizer_head() {
 }
 endif; // casper_customizer_head
 add_action( 'wp_head', 'casper_customizer_head' );
+
+function pagination_bar( $query_wp )
+{
+    $pages = $query_wp->max_num_pages;
+    $big = 999999999; // need an unlikely integer
+    if ($pages > 1)
+    {
+        $page_current = max(1, get_query_var('paged'));
+        echo paginate_links(array(
+            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+            'format' => '?paged=%#%',
+            'current' => $page_current,
+            'total' => $pages,
+        ));
+    }
+}
+
 ?>
